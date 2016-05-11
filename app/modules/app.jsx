@@ -1,15 +1,15 @@
 'use strict';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-var Test = React.createClass({
-    render: function () {
-        return (
-            <div>Hey dudes</div>
-        )
+import Test2 from './components/Test.jsx';
+
+class Test extends React.Component{
+    render() {
+        return <Test2 />;
     }
-});
+}
 
 ReactDOM.render(
     <Test />,
