@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                     ]
                 },
                 files: {
-                    "./app/dist/module.js": ["./app/modules/**/*.jsx", "./app/modules/**/*.js", "./app/vendor/**/*.js"]
+                    "./app/dist/module.js": ["./app/modules/**/*.jsx", "./app/modules/**/*.js"]
                 }
             }
         },
