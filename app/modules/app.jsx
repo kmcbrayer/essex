@@ -3,15 +3,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Test2 from './components/Test.jsx';
+import Header from './components/Header.jsx';
 
-class Test extends React.Component{
+class App extends React.Component {
     render() {
-        return <Test2 />;
+        return <Header />;
     }
 }
 
 ReactDOM.render(
-    <Test />,
+    <App />,
     document.getElementById('content')
 );

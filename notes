@@ -1,8 +1,6 @@
 start adding react components:
-    install react:
-        put in '/app/vendors/'?
-        add /vendors to browserify path?
-    base react class?
+    Block implementation BEM?
+        install Sass processer on grunt
 
     get data from infrastructure service file (experienceAnalytics.gsp):
         https://facebook.github.io/react/tips/initial-ajax.html
