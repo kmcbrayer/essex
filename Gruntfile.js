@@ -10,10 +10,7 @@ module.exports = function (grunt) {
                     ]
                 },
                 files: {
-                    // if the source file has an extension of es6 then
-                    // we change the name of the source file accordingly.
-                    // The result file's extension is always .js
-                    "./dist/module.js": ["./modules/index.js"]
+                    "./app/dist/module.js": ["./app/modules/**.jsx", "./app/modules/**.js"]
                 }
             }
         },
@@ -28,7 +25,7 @@ module.exports = function (grunt) {
                 options: {
                     port: 9000,
                     base: {
-                        path: "templates",
+                        path: "app",
                         options: {
                             index: "index.html",
                             maxAge: 300000
