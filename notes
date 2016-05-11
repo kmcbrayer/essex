@@ -1,11 +1,10 @@
 start adding react components:
     Block implementation BEM?
-        install Sass processer on grunt
+
 
     get data from infrastructure service file (experienceAnalytics.gsp):
         https://facebook.github.io/react/tips/initial-ajax.html
     mimic dom from experienceAnalytics for adding to direct elements
 
 TODOS:
-create uglify task for min of module.js
-SASS compiler?
+create uglify task for min of module.js for production

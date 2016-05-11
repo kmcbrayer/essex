@@ -15,9 +15,9 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _componentsHeaderJsx = require('./components/Header.jsx');
+var _componentsHeaderHeaderJsx = require('./components/header/Header.jsx');
 
-var _componentsHeaderJsx2 = _interopRequireDefault(_componentsHeaderJsx);
+var _componentsHeaderHeaderJsx2 = _interopRequireDefault(_componentsHeaderHeaderJsx);
 
 var App = (function (_React$Component) {
     _inherits(App, _React$Component);
@@ -29,7 +29,7 @@ var App = (function (_React$Component) {
     }
 
     App.prototype.render = function render() {
-        return _react2['default'].createElement(_componentsHeaderJsx2['default'], null);
+        return _react2['default'].createElement(_componentsHeaderHeaderJsx2['default'], null);
     };
 
     return App;
@@ -37,7 +37,7 @@ var App = (function (_React$Component) {
 
 _reactDom2['default'].render(_react2['default'].createElement(App, null), document.getElementById('content'));
 
-},{"./components/Header.jsx":2,"react":169,"react-dom":31}],2:[function(require,module,exports){
+},{"./components/header/Header.jsx":2,"react":169,"react-dom":31}],2:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -64,7 +64,7 @@ var Header = (function (_React$Component) {
     Header.prototype.render = function render() {
         return _react2['default'].createElement(
             'h1',
-            null,
+            { className: 'appHeader' },
             'I\'m a header'
         );
     };
