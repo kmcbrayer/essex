@@ -1,10 +1,11 @@
-start adding react components:
+design:
     Block implementation BEM?
 
 
+start adding react components:
     get data from infrastructure service file (experienceAnalytics.gsp):
         https://facebook.github.io/react/tips/initial-ajax.html
     mimic dom from experienceAnalytics for adding to direct elements
 
-TODOS:
+later TODOS:
 create uglify task for min of module.js for production
