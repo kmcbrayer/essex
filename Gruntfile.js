@@ -14,10 +14,21 @@ module.exports = function (grunt) {
                 }
             }
         },
+        sass: {
+            dist: {
+                files: {
+                    './app/dist/style.css' : ['./app/modules/**/*.scss']
+                }
+            }
+        },
         watch: {
             scripts: {
                 files: ["./app/modules/**/*.jsx", "./app/modules/**/*.js"],
                 tasks: ["browserify"]
+            },
+            css: {
+                files: ["./app/modules/**/*.scss"],
+                tasks: ["sass"]
             }
         },
         connect: {
@@ -39,6 +50,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-browserify");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
-    grunt.registerTask("default", ["browserify","connect","watch"]);
+    grunt.registerTask("default", ["browserify","connect","sass","watch"]);
 };

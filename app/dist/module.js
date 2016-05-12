@@ -15,29 +15,29 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _componentsTestJsx = require('./components/Test.jsx');
+var _componentsHeaderHeaderJsx = require('./components/header/Header.jsx');
 
-var _componentsTestJsx2 = _interopRequireDefault(_componentsTestJsx);
+var _componentsHeaderHeaderJsx2 = _interopRequireDefault(_componentsHeaderHeaderJsx);
 
-var Test = (function (_React$Component) {
-    _inherits(Test, _React$Component);
+var App = (function (_React$Component) {
+    _inherits(App, _React$Component);
 
-    function Test() {
-        _classCallCheck(this, Test);
+    function App() {
+        _classCallCheck(this, App);
 
         _React$Component.apply(this, arguments);
     }
 
-    Test.prototype.render = function render() {
-        return _react2['default'].createElement(_componentsTestJsx2['default'], null);
+    App.prototype.render = function render() {
+        return _react2['default'].createElement(_componentsHeaderHeaderJsx2['default'], null);
     };
 
-    return Test;
+    return App;
 })(_react2['default'].Component);
 
-_reactDom2['default'].render(_react2['default'].createElement(Test, null), document.getElementById('content'));
+_reactDom2['default'].render(_react2['default'].createElement(App, null), document.getElementById('content'));
 
-},{"./components/Test.jsx":2,"react":169,"react-dom":31}],2:[function(require,module,exports){
+},{"./components/header/Header.jsx":2,"react":169,"react-dom":31}],2:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -52,27 +52,27 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var Test2 = (function (_React$Component) {
-    _inherits(Test2, _React$Component);
+var Header = (function (_React$Component) {
+    _inherits(Header, _React$Component);
 
-    function Test2() {
-        _classCallCheck(this, Test2);
+    function Header() {
+        _classCallCheck(this, Header);
 
         _React$Component.apply(this, arguments);
     }
 
-    Test2.prototype.render = function render() {
+    Header.prototype.render = function render() {
         return _react2['default'].createElement(
-            'div',
-            null,
-            'Hey Test2'
+            'h1',
+            { className: 'appHeader' },
+            'I\'m a header'
         );
     };
 
-    return Test2;
+    return Header;
 })(_react2['default'].Component);
 
-exports['default'] = Test2;
+exports['default'] = Header;
 module.exports = exports['default'];
 
 },{"react":169}],3:[function(require,module,exports){
@@ -1404,6 +1404,9 @@ var currentQueue;
 var queueIndex = -1;
 
 function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
     draining = false;
     if (currentQueue.length) {
         queue = currentQueue.concat(queue);
